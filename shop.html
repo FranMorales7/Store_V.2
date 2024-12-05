@@ -4,7 +4,7 @@
     <!--Icono de la marca-->
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="./css/estilo.css">
     <title>PLAXER_WEB</title>
 </head>
 <body>
@@ -72,7 +72,7 @@
                 <p>
                   <button id="btLinks" type="button" class="btn btn-link text-white text-decoration-none small">Recents</button> / 
                   <button id="btLinks" type="button" class="btn btn-link text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#storesModal">Store</button> /
-                  <button id="btLinks" type="button" class="btn btn-link text-white text-decoration-none small">Upper price</button> / 
+                  <button id="btLinks" type="button" class="btn btn-link text-white text-decoration-none small" data-bs-toggle="modal" data-bs-target="#priceModal">Price</button> / 
                   <button id="btLinks" type="button" class="btn btn-link text-white text-decoration-none small">Gender</button>
                 </p>
               </div>
@@ -97,19 +97,57 @@
                   </div>
                 </div>
               </div>
-          <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-8">
-              <div class="text-secondary mb-4">
-                <p>SHOWING ALL <span id="resBusqueda"></span> RESULTS</p>
+
+               <!--Price Modal-->
+               <div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="priceModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="priceModalLabel">Select price</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="price-content text-black text-align-center d-flex justify-content-between">
+                        <div class="">
+                          <label for=""><b>MIN</b></label>
+                          <p id="minValue">$5</p>
+                        </div>
+
+                        <div class="mx-2">
+                          <label for=""><b>MAX</b></label>
+                          <p id="maxValue">$500</p>
+                        </div>
+                      </div>
+
+                      <div class="range-slider ">
+                        <div class="range-fill">
+                          <input type="range" class="minPrice" value="100" min="0" max="500">
+                          <input type="range" class="maxPrice" value="100" min="0" max="500">
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" id="guardarPrecio" class="btn btn-success" data-bs-dismiss="modal">Save changes</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-               
+
+
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="text-secondary mb-4">
+                  <p>SHOWING ALL <span id="resBusqueda"></span> RESULTS</p>
+                </div>
   
-              <!--Productos-->
-              <div id="divTienda" class="row g-3">
-              <!--PRODUCTOS AQUÍ-->
+                <!--Productos-->
+                <div id="divTienda" class="row g-3">
+                <!--PRODUCTOS AQUÍ-->
+                </div>
               </div>
-            </div>
-            <!--
+            
             <div class="col-lg-4 col-md-4">
               <div class="accordion" id="introAccordion">
                 <div class="accordion-item" id="acordeon">
@@ -197,95 +235,8 @@
         </div>
         </div>
       </section>
-    -->
-    <!--Footer
-    footer fixed-bottom
-    -->
-    <footer id="footer" class=" bg-dark text-white py-2">
-        <div class="container-fluid" id="borderBottom">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <img id="momentImg" src="./img/logo-light.png" alt="">
-              <div class="col-8 mt-4 mb-3" id="borderBottom">
-                <p class="text-secondary">Enter your email</p>
-              </div>
-              <div class="col-3">
-              <p>
-                <!--Simbolo de flecha-->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                </svg>  Subscribe
-              </p>
-              </div>
-              <div class="col-12 d-flex justify-content-center">
-                <p>
-                  The world without photography will be meaningless to us.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="col mx-0">
-                <h1>Address</h1>
-              </div>
-                <p class="mb-0">Baker Street 223b London, C 70413</p>
-                <p><strong>Open:</strong> 9:30 AM 5:30 PM</p>
-                
-                <p><strong>Phone:</strong> +1(800) 456 37 11</p>
-                <p><strong>Email:</strong> support@promo-theme.com</p>
-              <div class="col-3 mx-4">
-                <p class="d-flex justify-content-center mb-3">
-                  <img id="serviciosImg" src="./img/logoInstagram.webp" alt="">
-                  <img id="serviciosImg" src="./img/logoTwitter.webp" alt="">
-                  <img id="serviciosImg" src="./img/logoFacebook.webp" alt="">
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="col-12 mx-0">
-                <h1>Recent Posts</h1>
-              </div>
-                <p class="mb-0 text-secondary">Kills You Slowly</p>
-                <p>November 8, 2019</p>
-                <p class="mb-0 text-secondary">Clout</p>
-                <p>April 22, 2019</p>
-                <p class="mb-0 text-secondary">Jerome</p>
-                <p>May 12, 2019</p>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="col-12">
-                <h1>Recent Comments</h1>
-              </div>
-              <div class="col-12 d-flex justify-content-start ">
-                <p class="mb-0 text-secondary">Elena Cobsky </p> - Driving Engagement Online
-              </div>
-              <div class="col-12 d-flex justify-content-start">
-                <p class="mb-0 text-secondary">John Michel </p> - Designin for the Web in 2019
-              </div>
-              <div class="col-12 d-flex justify-content-start">
-                <p class="mb-0 text-secondary">Anton Stockman</p> - Streamlining the Path to
-              </div>Conversion
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid bg-dark mt-2 text-secondary">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <p>
-                <!--Simbolo de marca-->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
-                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
-              </svg> 2024 GameFusion StudiosTeam | Privacy Policy | Sitemap
-              </p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end">
-              <p>
-                All Rights Reseved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
-  
+    
+    
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="js/app.js"></script>
 </body>
