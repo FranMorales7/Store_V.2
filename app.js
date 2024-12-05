@@ -10,7 +10,9 @@
 const opcTiendas = document.querySelector('#selectStores');
 let url =``;
 const saveTienda = document.querySelector('#guardarTienda');
-
+let minValue = document.getElementById('minValue');
+let maxValue = document.getElementById('maxValue');
+const rangePrice =  document.getElementById('rangePrice');
 
 
 //METODOS necesarios
@@ -86,7 +88,7 @@ function crearTabla(datos){
     divTabla.innerHTML=''; //se limpia el divTabla del DOM
 
     //Solo se mostraran doce elementos por pagina
-    while(contador < 12){
+    while(contador < 16){
     // Generar la estructura HTML combinada con clases de bootstrap y estilo css propio
     const listadoHTML =
         `
@@ -108,3 +110,32 @@ function crearTabla(datos){
     resultado.textContent=contador;//Se indica la cantidad de elementos encontrados
     }
 }
+
+//Generar obtener precio
+function obtenerPrecio(){
+    //URL a emplear
+    //url += `&lowerPrice=${minValue}&upperPrice=${maxValue}`;
+    
+    //Validar precio
+    function validatePrice(){
+        const inputElements = document.querySelectorAll('.range-fill');
+        let minPrice = parseInt(inputElements[0].value);
+        let maxPrice = parseInt(inputElements[1].value);
+
+        //Si el valor de precio minimo es mayor que del precio maximo, se intercambian los valores
+        if(minPrice>maxPrice){
+            let auxPrice = maxPrice;
+            maxPrice = minPrice;
+            minPrice = auxPrice;
+        }
+
+        minValue.textContent=`${minPrice}`;
+        maxValue.textContent=`${maxPrice}`;
+    }
+
+    inputElements.forEach(price => {
+        price.addEventListener('input', validatePrice)
+    });
+}
+
+obtenerPrecio();
