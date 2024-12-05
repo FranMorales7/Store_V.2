@@ -7,115 +7,6 @@
     background-color: #828282; /* Cambia el color de fondo al pasar el cursor */
 }
 
-#servicios {
-    background: radial-gradient(circle, rgba(67,0,131,1) 1%, rgba(0,0,0,1) 100%); /* Fondo con degradado radial */
-}
-
-#servicio_container {
-    background-color: black; /* Fondo negro para el contenedor de servicios */
-}
-
-#servicio_container:hover {
-    background: linear-gradient(135deg, #a1052c, #0750d0); /* Cambia el fondo a un degradado en diagonal al pasar el cursor */
-    transform: scale(1.1); /* Aumenta el tamaño del contenedor ligeramente */
-}
-
-#serviciosImg {
-    max-height: 50px; /* Limita la altura máxima de las imágenes de servicios */
-}
-
-#know, #know_2 {
-    color: white; /* Texto blanco */
-    text-decoration: none; /* Sin subrayado en los enlaces */
-}
-
-#events {
-    padding-top: 50px; /* Espaciado superior */
-    background-color: black; /* Fondo negro para la sección de eventos */
-}
-
-.eventsCards {
-    font-size: 8pt; /* Tamaño pequeño para el texto de las tarjetas */
-    color: white; /* Texto blanco */
-    background-color: black; /* Fondo negro */
-}
-
-.card {
-    color: white; /* Texto blanco */
-    background-color: black; /* Fondo negro para las tarjetas */
-    margin-top: 50px; /* Margen superior */
-}
-
-.card-img-top {
-    height: 344px; /* Altura fija para las imágenes de las tarjetas */
-}
-
-.card-img-v2 {
-    max-height: 100%; /* Altura máxima ajustada al contenedor */
-    max-width: fit-content; /* Anchura ajustada automáticamente */
-    margin: 10px; /* Margen alrededor de la imagen */
-}
-
-#Logo {
-    max-width: 150px; /* Anchura máxima del logo */
-}
-
-#Carrusel {
-    z-index: 0; /* Nivel de apilamiento inicial */
-    position: absolute; /* Posición absoluta */
-}
-
-#navegador {
-    z-index: 1; /* Apila el navegador sobre otros elementos */
-    position: fixed; /* Fija el navegador en la parte superior */
-}
-
-#btLinks {
-    margin: 3px; /* Margen pequeño */
-    padding: 0; /* Sin relleno */
-}
-
-#btLinks:hover {
-    background-color: orange; /* Fondo naranja al pasar el cursor */
-    max-width: fit-content; /* Ajusta el tamaño al contenido */
-    max-height: fit-content; /* Ajusta la altura al contenido */
-}
-
-.bgPartidos {
-    background-color: #000000a1; /* Fondo negro con transparencia */
-    max-width: fit-content; /* Ajusta el ancho al contenido */
-}
-
-.calendarioPartidos:hover {
-    background: linear-gradient(135deg, #a1052c, #0750d0); /* Fondo degradado al pasar el cursor */
-    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
-}
-
-.calendarioPartidos {
-    max-width: 100%; /* Ocupa el ancho completo */
-    max-height: 200px; /* Altura máxima de 200px */
-}
-
-#team {
-    max-height: 100px; /* Limita la altura máxima de la imagen del equipo */
-}
-
-#Unicon {
-    background-image: url("/img/unicon.webp"); /* Imagen de fondo para el contenedor */
-    background-size: cover; /* Ajusta el fondo para cubrir el área */
-    background-repeat: no-repeat; /* Evita que el fondo se repita */
-    color: white; /* Texto blanco */
-}
-
-#Unicon button, #contact button {
-    background: linear-gradient(135deg, #a1052c, #0750d0); /* Fondo degradado para botones */
-    color: white; /* Texto blanco */
-}
-
-#Unicon button:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón al pasar el cursor */
-}
-
 body {
     background-color: black; /* Fondo negro para toda la página */
     color: white; /* Texto blanco */
@@ -128,21 +19,6 @@ body {
 .col-1 img {
     max-height: 100%; /* Altura ajustada al contenedor */
     max-width: 100%; /* Ancho ajustado al contenedor */
-}
-
-#video {
-    max-width: 500px; /* Limita el ancho máximo del video */
-    max-height: 315px; /* Limita la altura máxima del video */
-}
-
-#aboutImg {
-    max-width: 100%; /* Ocupa todo el ancho del contenedor */
-    max-height: 100%; /* Ocupa toda la altura del contenedor */
-    background-size: cover; /* Ajusta el fondo para cubrir el área */
-}
-
-#headAbout {
-    height: 100px; /* Altura fija para el encabezado */
 }
 
 #acordeon {
@@ -164,34 +40,6 @@ body {
     color: white; /* Texto blanco */
 }
 
-.card-img-top {
-    width: auto; /* Ancho automático */
-    height: 50vh; /* Altura de la mitad de la ventana */
-    object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
-}
-
-.equipoImg {
-    width: 360px; /* Ancho fijo */
-    height: 400px; /* Altura fija */
-}
-
-#momentImg {
-    max-width: 250px; /* Anchura máxima */
-    max-height: 120px; /* Altura máxima */
-    object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
-}
-
-#momentContainer {
-    background-color: #180037; /* Fondo morado oscuro */
-    width: 80vw; /* 80% del ancho de la ventana */
-    display: flex; /* Usa flexbox */
-    justify-content: center; /* Centra los elementos horizontalmente */
-}
-
-#momentContainer:hover {
-    background: linear-gradient(135deg, #a1052c, #0750d0); /* Fondo degradado al pasar el cursor */
-}
-
 #borderBottom {
     border-style: solid; /* Tipo de borde sólido */
     border-bottom: solid #505050; /* Borde inferior gris */
@@ -202,4 +50,23 @@ body {
 
 .imgShop {
     max-width: 100%; /* Anchura máxima ajustada al contenedor */
+}
+
+.range-slider {
+    position: relative;
+    width: 300px;
+    margin: 15px 0 30px 0;
+}
+
+.range-fill{
+    height: 6px;
+    position: absolute;
+    z-index: 0;
+}
+
+input[type="range"] {
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0;
 }
