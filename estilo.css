@@ -1,72 +1,21 @@
-#carouselExampleCaptions {
-    position: relative; /* Posiciona el carrusel de manera relativa respecto a su contenedor */
-    z-index: -1; /* Envía el carrusel detrás de otros elementos */
-}
-
-#menuNav:hover {
-    background-color: #828282; /* Cambia el color de fondo al pasar el cursor */
-}
-
 body {
-    background-color: black; /* Fondo negro para toda la página */
-    color: white; /* Texto blanco */
+    background-color: black; /* Sets black background for the entire page */
+    color: white; /* Sets white text color */
 }
 
 #shLink {
-    text-decoration: none; /* Sin subrayado para los enlaces */
-}
-
-.col-1 img {
-    max-height: 100%; /* Altura ajustada al contenedor */
-    max-width: 100%; /* Ancho ajustado al contenedor */
-}
-
-#acordeon {
-    background: #000; /* Fondo negro */
-    color: white; /* Texto blanco */
-}
-
-#btAcordeon {
-    background: #000; /* Fondo negro */
-    color: white; /* Texto blanco */
-}
-
-#btAcordeon:hover {
-    background: #0750d0; /* Cambia el fondo a azul al pasar el cursor */
-}
-
-#btAcordeonAux {
-    background: #000; /* Fondo negro */
-    color: white; /* Texto blanco */
+    text-decoration: none; /* Removes underline from links */
 }
 
 #borderBottom {
-    border-style: solid; /* Tipo de borde sólido */
-    border-bottom: solid #505050; /* Borde inferior gris */
-    border-top: none; /* Sin borde superior */
-    border-left: none; /* Sin borde izquierdo */
-    border-right: none; /* Sin borde derecho */
+    border-bottom: solid #505050; /* Gray bottom border */
+    border-style: solid; /* Solid border style */
 }
 
-.imgShop {
-    max-width: 100%; /* Anchura máxima ajustada al contenedor */
+#btLinks {
+    padding: 5px; /* Adds padding for better spacing */
 }
 
-.range-slider {
-    position: relative;
-    width: 300px;
-    margin: 15px 0 30px 0;
-}
-
-.range-fill{
-    height: 6px;
-    position: absolute;
-    z-index: 0;
-}
-
-input[type="range"] {
-    width: 100%;
-    background: transparent;
-    position: absolute;
-    left: 0;
+#btLinks:hover {
+    background-color: goldenrod; /* Changes background color on hover */
 }
